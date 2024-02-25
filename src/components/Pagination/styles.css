@@ -1,0 +1,37 @@
+.pagination-container {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  cursor: pointer;
+}
+
+.pagination-numbers {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  padding: 0;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 20px;
+}
+
+.left-arrow {
+  margin-right: 12px;
+}
+
+.right-arrow {
+  margin-left: 12px;
+}
+
+.left-arrow-button,
+.right-arrow-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.page-individual-number {
+  font-family: "Poppins", sans-serif;
+}
