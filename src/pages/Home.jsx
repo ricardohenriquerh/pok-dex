@@ -58,6 +58,9 @@ export const Home = () => {
 
   const pokemonFilter = (name) => {
     const filteredPokemons = [];
+
+    name = name.toLowerCase();
+
     if (name === "") {
       getPokemons();
     }
@@ -67,10 +70,11 @@ export const Home = () => {
         filteredPokemons.push(pokemons[i]);
       }
     }
+
+    console.log(name.toLowerCase(), "aa");
     setPokemons(filteredPokemons);
   };
 
-  console.log(pokemons);
   useEffect(() => {
     getPokemons();
   }, []);
@@ -91,7 +95,7 @@ export const Home = () => {
                   className={`card-container ${types[0]}`}
                 >
                   <div className={`card-image `}>
-                    <img src={imageUrl} />
+                    <img src={imageUrl} alt="pokemon-card" />
                   </div>
                 </div>
               </>
@@ -107,7 +111,7 @@ export const Home = () => {
           paginate={paginate}
           nextPage={nextPage}
           previousPage={previousPage}
-          showCardInfo={showCardInfo}
+          currentPage={currentPage}
         />
       </div>
       <div
